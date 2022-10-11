@@ -29,7 +29,9 @@ export default function App() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         名前
-        <input {...register("name", { required: true })} />
+        <input {...register("name", { required: true,
+        disabled: true
+        })} />
       </label>
       {/* 未入力の場合は、バリデーションが失敗してエラーになる */}
       {/* erros.nameが値が入る（undefind）ので、右辺のpタグが評価される */}
